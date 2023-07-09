@@ -243,6 +243,27 @@
           </address>
         </div>
       </div>
+      <div><button id="openModal">Відкрити модальне вікно</button></div>
     </footer>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Модальне вікно</h2>
+        <p>Це зміст модального вікна.</p>
+      </div>
+    </div>
+    <script>
+      var openModalBtn = document.getElementById("openModal");
+      var modal = document.getElementById("modal");
+      var closeBtn = modal.querySelector(".close");
+
+      openModalBtn.addEventListener("click", function () {
+        modal.style.display = "block";
+      });
+
+      closeBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+      });
+    </script>
   </body>
 </html>
